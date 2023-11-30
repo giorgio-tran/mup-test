@@ -9,9 +9,10 @@ import { BoxArrowRight, PersonFill, PersonPlusFill } from 'react-bootstrap-icons
 const NavBar = () => {
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { currentUser } = useTracker(() => ({
-    currentUser: Meteor.user() ? Meteor.user().username : '',
+    currentUser: Meteor.user(),
   }), []);
 
+  console.log(currentUser);
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -44,7 +45,7 @@ const NavBar = () => {
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (
-              <NavDropdown id="navbar-current-user" title={currentUser}>
+              <NavDropdown id="navbar-current-user" title={currentUser?.username}>
                 <NavDropdown.Item id="navbar-sign-out" as={NavLink} to="/signout">
                   <BoxArrowRight />
                   {' '}

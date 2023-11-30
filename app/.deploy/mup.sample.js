@@ -1,9 +1,9 @@
 module.exports = {
   servers: {
     one: {
-      host: '111.222.333.444',
+      host: '146.190.35.6',
       username: 'root',
-      password: 'changeme'
+      password: 'chang3M3now'
     }
   },
   app: {
