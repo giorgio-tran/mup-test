@@ -1,8 +1,8 @@
-import { Selector } from "testcafe";
+import { Selector } from 'testcafe';
 
 class LandingPage {
   constructor() {
-    this.pageId = "#landing-page";
+    this.pageId = '#landing-page';
     this.pageSelector = Selector(this.pageId);
   }
 
